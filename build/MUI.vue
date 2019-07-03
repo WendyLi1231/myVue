@@ -1,0 +1,250 @@
+<template>
+  <div class="MUI">
+    <div class="mui-collapse-content">
+      <form class="mui-input-group">
+        <div class="mui-input-row">
+          <label>姓名</label>
+          <input type="text" placeholder="普通输入框">
+        </div>
+        <div class="mui-input-row">
+          <label>身份证号</label>
+          <input type="text" class="mui-input-clear" placeholder="带清除按钮的输入框">
+        </div>
+
+        <div class="mui-input-row mui-plus-hidden">
+          <label>手机号</label>
+          <input type="text" class="mui-input-speech mui-input-clear" placeholder="语音输入">
+        </div>
+        <div class="mui-button-row">
+          <button class="mui-btn mui-btn-primary" type="button" onclick="return false;">确认</button>&nbsp;&nbsp;
+          <button
+            class="mui-btn mui-btn-primary"
+            type="button"
+            onclick="return false;"
+          >取消</button>
+        </div>
+      </form>
+    </div>
+
+    <nav class="mui-bar mui-bar-tab">
+      <a class="mui-tab-item mui-active" href="#tabbar">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+      </a>
+      <a class="mui-tab-item" href="#tabbar-with-chat">
+        <span class="mui-icon mui-icon-email">
+          <span class="mui-badge">9</span>
+        </span>
+        <span class="mui-tab-label">消息</span>
+      </a>
+      <a class="mui-tab-item" href="#tabbar-with-contact">
+        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-tab-label">通讯录</span>
+      </a>
+      <a class="mui-tab-item" href="#tabbar-with-map">
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">设置</span>
+      </a>
+    </nav>
+    <div class="mui-content">
+      <div id="tabbar" class="mui-control-content mui-active">
+        <div class="title">这是div模式选项卡中的第1个子页面.</div>
+        <div class="title">
+          何谓div模式的选项卡？
+          其实就是通过DIV模拟一个独立页面，通过DIV的显示、隐藏模拟不同页面的切换，典型的SPA模式；
+        </div>
+        <div class="title">
+          这种模式适合简单业务系统，因为每个选项卡内容要写在一个DIV中，
+          若逻辑复杂，会导致当前页面DOM结构繁杂，造成webview响应缓慢，甚至崩溃；
+          因此若系统较复杂，需要下拉刷新等操作，推荐使用webview模式的选项卡；
+        </div>
+      </div>
+      <div id="tabbar-with-chat" class="mui-control-content">
+        <div class="title">这是div模式选项卡中的第2个子页面，该页面展示一个消息列表</div>
+
+        <ul class="mui-table-view mui-table-view-chevron">
+          <li class="mui-table-view-cell">
+            <a href class="mui-navigate-right">Item 1</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a href class="mui-navigate-right">Item 2</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a href class="mui-navigate-right">Item 3</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a href class="mui-navigate-right">Item 4</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a href class="mui-navigate-right">Item 5</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a href class="mui-navigate-right">Item 6</a>
+          </li>
+        </ul>
+      </div>
+      <div id="tabbar-with-contact" class="mui-control-content">
+        <div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
+        <ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+          <li class="mui-table-view-cell">
+            <div class="mui-slider-cell">
+              <div class="oa-contact-cell mui-table">
+                <div class="oa-contact-avatar mui-table-cell">
+                  <img src="../../static/images/cbd.jpg">
+                </div>
+                <div class="oa-contact-content mui-table-cell">
+                  <div class="mui-clearfix">
+                    <h4 class="oa-contact-name">叶文洁</h4>
+                    <span class="oa-contact-position mui-h6">董事长</span>
+                  </div>
+                  <p class="oa-contact-email mui-h6">yewenjie@sina.com</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="mui-table-view-cell">
+            <div class="mui-slider-cell">
+              <div class="oa-contact-cell mui-table">
+                <div class="oa-contact-avatar mui-table-cell">
+                  <img src="../../static/images/cbd.jpg">
+                </div>
+                <div class="oa-contact-content mui-table-cell">
+                  <div class="mui-clearfix">
+                    <h4 class="oa-contact-name">艾AA</h4>
+                    <span class="oa-contact-position mui-h6">总经理</span>
+                  </div>
+                  <p class="oa-contact-email mui-h6">aaa@163.com</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="mui-table-view-cell">
+            <div class="mui-slider-cell">
+              <div class="oa-contact-cell mui-table">
+                <div class="oa-contact-avatar mui-table-cell">
+                  <img src="../../static/images/cbd.jpg">
+                </div>
+                <div class="oa-contact-content mui-table-cell">
+                  <div class="mui-clearfix">
+                    <h4 class="oa-contact-name">罗辑</h4>
+                    <span class="oa-contact-position mui-h6">员工</span>
+                  </div>
+                  <p class="oa-contact-email mui-h6">luoji@126.com</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="mui-table-view-cell">
+            <div class="mui-slider-cell">
+              <div class="oa-contact-cell mui-table">
+                <div class="oa-contact-avatar mui-table-cell">
+                  <img src="../../static/images/cbd.jpg">
+                </div>
+                <div class="oa-contact-content mui-table-cell">
+                  <div class="mui-clearfix">
+                    <h4 class="oa-contact-name">云天明</h4>
+                    <span class="oa-contact-position mui-h6">员工</span>
+                  </div>
+                  <p class="oa-contact-email mui-h6">ytm@163.com</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="mui-table-view-cell">
+            <div class="mui-slider-cell">
+              <div class="oa-contact-cell mui-table">
+                <div class="oa-contact-avatar mui-table-cell">
+                  <img src="../../static/images/cbd.jpg">
+                </div>
+                <div class="oa-contact-content mui-table-cell">
+                  <div class="mui-clearfix">
+                    <h4 class="oa-contact-name">史强</h4>
+                    <span class="oa-contact-position mui-h6">员工</span>
+                  </div>
+                  <p class="oa-contact-email mui-h6">shiqiang@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="tabbar-with-map" class="mui-control-content">
+        <div class="title">这是div模式选项卡中的第4个子页面，该页面展示一个常见的设置示例.</div>
+        <ul class="mui-table-view">
+          <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">新消息通知</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">隐私</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">通用</a>
+          </li>
+        </ul>
+        <ul class="mui-table-view" style="margin-top: 25px;">
+          <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">关于mui</a>
+          </li>
+        </ul>
+        <ul class="mui-table-view" style="margin-top: 25px;">
+          <li class="mui-table-view-cell">
+            <a style="text-align: center;color: #FF3B30;">退出登录</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Vue from "vue";
+
+export default {
+  name: "MUI",
+  data() {
+    return {};
+  },
+  created () {
+   
+  }
+};
+</script>
+</script>
+
+
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.title {
+  margin: 20px 15px 10px;
+  color: #6d6d72;
+  font-size: 15px;
+}
+
+.oa-contact-cell.mui-table .mui-table-cell {
+  padding: 11px 0;
+  vertical-align: middle;
+}
+
+.oa-contact-cell {
+  position: relative;
+  margin: -11px 0;
+}
+
+.oa-contact-avatar {
+  width: 75px;
+}
+.oa-contact-avatar img {
+  border-radius: 50%;
+}
+.oa-contact-content {
+  width: 100%;
+}
+.oa-contact-name {
+  margin-right: 20px;
+}
+.oa-contact-name,
+oa-contact-position {
+  float: left;
+}
+</style>
